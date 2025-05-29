@@ -1932,7 +1932,7 @@ probe_err:
 	return ret;
 }
 
-static int ics_haptic_remove(struct i2c_client *client)
+static void ics_haptic_remove(struct i2c_client *client)
 {
 	struct ics_haptic_data *haptic_data = i2c_get_clientdata(client);
 
@@ -1968,8 +1968,6 @@ static int ics_haptic_remove(struct i2c_client *client)
 		//devm_gpio_free(&client->dev, haptic_data->gpio_en);
 		gpio_free(haptic_data->gpio_en);
 	}
-
-	return 0;
 }
 
 static int __maybe_unused ics_haptic_suspend(struct device *dev)
@@ -2007,7 +2005,7 @@ static struct i2c_driver ics_haptic_driver = {
 	},
 	.id_table = ics_haptic_id,
 	.probe = ics_haptic_probe,
-	.remove = (void *)ics_haptic_remove,
+	.remove = ics_haptic_remove,
 };
 
 static int __init ics_haptic_init(void)
