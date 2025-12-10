@@ -5187,6 +5187,7 @@ kernel/bpf/devmap.c
 kernel/bpf/disasm.c
 kernel/bpf/disasm.h
 kernel/bpf/dispatcher.c
+kernel/bpf/dmabuf_iter.c
 kernel/bpf/hashtab.c
 kernel/bpf/helpers.c
 kernel/bpf/inode.c

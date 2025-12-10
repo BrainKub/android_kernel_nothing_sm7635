@@ -48,8 +48,12 @@
   __balance_callbacks
   balance_push_callback
   bcmp
+  __bio_add_page
+  bio_alloc_bioset
+  bio_chain
   bio_endio
   bio_end_io_acct_remapped
+  bio_init
   bio_start_io_acct
   bitmap_allocate_region
   __bitmap_andnot
@@ -63,6 +67,8 @@
   __bitmap_set
   bitmap_zalloc
   __blk_alloc_disk
+  blkdev_get_by_dev
+  blkdev_put
   blk_execute_rq_nowait
   blk_get_queue
   blk_mq_free_request
@@ -676,6 +682,9 @@
   __fdget
   fd_install
   fget
+  file_path
+  filp_close
+  filp_open_block
   _find_first_bit
   _find_next_bit
   _find_next_zero_bit
@@ -705,6 +714,7 @@
   freq_qos_add_request
   freq_qos_remove_request
   freq_qos_update_request
+  fs_bio_set
   fwnode_find_reference
   fwnode_get_name
   fwnode_get_next_child_node
@@ -1252,6 +1262,7 @@
   netlink_unregister_notifier
   net_ns_type_operations
   net_ratelimit
+  next_arg
   nla_find
   nla_memcpy
   __nla_parse
@@ -1962,6 +1973,8 @@
   strscpy_pad
   strsep
   strstr
+  submit_bio
+  submit_bio_wait
   __sw_hweight16
   __sw_hweight32
   __sw_hweight64
